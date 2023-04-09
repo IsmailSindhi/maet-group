@@ -4,4 +4,12 @@
 @tailwind utilities;
 
 
-
+@layer base {
+    @font-face {
+    font-family: 'Verctex';
+    src: url('/Sarem-Marjan-1.1-Regular.ttf') format('ttf');
+         /* url('/fonts/MyFont.woff') format('woff'); */
+    font-weight: normal;
+    font-style: normal;
+  }
+}
