@@ -1,7 +1,13 @@
-import React from "react";
+import React, { FormEvent, useContext } from "react";
+import { AppContext } from "../pages/index";
+import { MyClass } from '../utils/gsheet';
 interface SubmitButtonProps {
     text : string;
 }
+
+
+
+
 const SubmitButton: React.FC<SubmitButtonProps> = ({ text }) => {
   return (
     <button
