@@ -1,6 +1,5 @@
 import React, { FormEvent, useContext } from "react";
 import { AppContext } from "../pages/index";
-import { MyClass } from '../utils/gsheet';
 interface SubmitButtonProps {
     text : string;
 }
