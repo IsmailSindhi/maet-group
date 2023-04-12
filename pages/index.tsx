@@ -47,7 +47,7 @@ export default function Home() {
     router.push('https://chat.whatsapp.com/DRPaQxsTTVaG4mII1YGdBO');
   };
 
-  // UI
+  // UI`
   return (
     <>
       <Head>
@@ -71,7 +71,7 @@ export default function Home() {
             Welcome To Maet Group
           </h1>
           <p className="text-blue-500 text-xl font-verctex text-center border-b-2 pb-2">
-            نھنجو نالو ، ولديت  ۽ ڪانٽيڪٽ نمبر لکي ڪري ھيٺئين بٽن کي ڪلڪ ڪري مائٽ گروپ ۾ شامل ٿيو
+            پنھنجو نالو ، ولديت  ۽ ڪانٽيڪٽ نمبر لکي ڪري ھيٺئين بٽڻ کي ڪلڪ ڪري مائٽ گروپ ۾ شامل ٿيو
           </p>
           <form className="flex flex-col items-center justify-center gap-4" onSubmit={handleSubmit}>
             <InputField placeholder="Name" value={name} setValue={setName} type="text"/>
