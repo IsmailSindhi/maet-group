@@ -1,5 +1,4 @@
-import React, { FormEvent, useContext } from "react";
-import { AppContext } from "../pages/index";
+import React from "react";
 interface SubmitButtonProps {
     text : string;
 }

@@ -1,6 +1,5 @@
 'use client';
-import React, { useContext } from "react";
-import { AppContext } from "../pages/index";
+import React from "react";
 
 
 interface InputFieldProps {
