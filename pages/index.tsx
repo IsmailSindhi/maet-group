@@ -44,7 +44,7 @@ export default function Home() {
     setName("")
     setFathername("")
     setContact(0)
-    router.push('https://chat.whatsapp.com/DRPaQxsTTVaG4mII1YGdBO');
+    router.push('https://chat.whatsapp.com/DsdZctuoD4o75IxSHGMyw0');
   };
 
   // UI`
