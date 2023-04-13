@@ -11,7 +11,7 @@ type AppContextType = {
   setName: any;
   fathername: string;
   setFathername: any;
-  contact: number;
+  contact: string;
   setContact: any;
 };
 
@@ -20,7 +20,7 @@ export const AppContext = createContext<AppContextType>({
   setName: () => {},
   fathername: "",
   setFathername: () => {},
-  contact : 0,
+  contact : "",
   setContact: () => {},
 });
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
   const router = useRouter();
   const [name, setName] = useState<string>("");
   const [fathername, setFathername] = useState<string>("");
-  const [contact, setContact] = useState<number>(0);
+  const [contact, setContact] = useState<string>("");
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -43,7 +43,7 @@ export default function Home() {
     // alert(content.data.tableRange);
     setName("")
     setFathername("")
-    setContact(0)
+    setContact("")
     router.push('https://chat.whatsapp.com/DsdZctuoD4o75IxSHGMyw0');
   };
 
@@ -60,7 +60,7 @@ export default function Home() {
         <link rel="icon" href="/maet.jpeg" />
       </Head>
       <AppContext.Provider value={{ name, setName, fathername, setFathername, contact, setContact }}>
-        <div className="flex flex-col items-center mt-4 mx-auto gap-4 max-w-xs py-5">
+        <div className="flex flex-col items-center mt-4 mx-auto gap-4 max-w-xs py-5 bg-white">
           <Image
             src="/maet.jpeg"
             alt="Maet Group Logo"
@@ -71,22 +71,24 @@ export default function Home() {
             Welcome To Maet Group
           </h1>
           <p className="text-blue-500 text-xl font-verctex text-center border-b-2 pb-2">
-            پنھنجو نالو ، ولديت  ۽ ڪانٽيڪٽ نمبر لکي ڪري ھيٺئين بٽڻ کي ڪلڪ ڪري مائٽ گروپ ۾ شامل ٿيو
+            پنھنجو نالو، ولديت  ۽ ڪانٽيڪٽ نمبر لکي ڪري ھيٺئين بٽڻ کي ڪلڪ ڪري مائٽ گروپ ۾ شامل ٿيو.<span className="text-white">س</span>
+          
+          
           </p>
           <form className="flex flex-col items-center justify-center gap-4" onSubmit={handleSubmit}>
             <InputField placeholder="Name" value={name} setValue={setName} type="text"/>
             <InputField
-              placeholder="Fathers Name"
+              placeholder="Father's Name"
               value={fathername}
               setValue={setFathername}
               type="text"
               />
               {/* <input placeholder="Contact" value={contact}  */}
             <InputField
-              placeholder="Contact"
+              placeholder="Phone Number"
               value={contact}
               setValue={setContact}
-              type="number"
+              type="tel"
             />
             <SubmitButton text="Join Maet Group" />
           </form>

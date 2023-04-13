@@ -4,7 +4,7 @@ import { google } from 'googleapis';
 type SheetForm = {
     name: string,
     fathername: string,
-    contact: number,
+    contact: string,
     formattedDateTime: string
 }
 
