@@ -74,21 +74,21 @@ export default function Home() {
           </p>
           <form className="flex flex-col items-center justify-center gap-4" onSubmit={handleSubmit(submitData)}>
             <input className="bg-blue-100 text-blue-700 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white" placeholder="Name" {...register("name")} type="text"/>
-            {errors.name && <span className="text-rose-500">Must contain at least 3 characters</span>}
+            {errors.name && <span className="text-rose-500">Please provide your name.</span>}
             <input
               placeholder="Father's Name"
               type="text"
               className="bg-blue-100 text-blue-700 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white"
               {...register("fathername")}
               />
-              {errors.fathername && <span className="text-rose-500"> Must contain at least 3 characters</span>}
+              {errors.fathername && <span className="text-rose-500">Please provide your father&apos;s name.</span>}
             <input
               placeholder="Phone Number"
               type="number"
               className="bg-blue-100 text-blue-700 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white"
               {...register("contact")}
               />
-              {errors.contact && <span className="text-rose-500"> Must contain at least 11 digits</span>}
+              {errors.contact && <span className="text-rose-500">Please provide your phone number.</span>}
             <SubmitButton text="Join Maet Group" />
           </form>
         </div>
