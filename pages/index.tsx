@@ -31,7 +31,7 @@ export default function Home() {
     } = useForm<FormData>({
       resolver: zodResolver(schema),
     });
-    const submitData = (data: FormData) => {
+    const submitData = async (data: FormData) => {
       console.log("IT WORKED", data);
       reset();
       const currentDate = new Date();
@@ -40,9 +40,14 @@ export default function Home() {
       
       const { name, fathername, contact} = data ;
       const form = { name, fathername, contact, formattedDateTime};
-      const response = fetch('api/submit', {method: 'POST' , headers : {'Accept' : 'application/json', 'Content-Type' : 'application/json'}, body: JSON.stringify(form)})
+      const response = await fetch('api/submit', {method: 'POST' , headers : {'Accept' : 'application/json', 'Content-Type' : 'application/json'}, body: JSON.stringify(form)})
+      // console.log(response);
+      if (response.status === 200) {
+        router.push('https://chat.whatsapp.com/DsdZctuoD4o75IxSHGMyw0');
 
-      router.push('https://chat.whatsapp.com/DsdZctuoD4o75IxSHGMyw0');
+      } else {alert("Internal Server Error")}
+      // const content = await response.json();
+      // console.log(content);
 
 
     };
